@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koenigsegg - Supercarros de Alta Performance</title>
+    <style>
+        /* Reset de margens e paddings */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Corpo do site */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: #fff;
+        }
+
+        /* Barra de navegação */
+        nav {
+            background-color: #1a1a1a;
+            padding: 20px 40px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffcc00;
+        }
+
+        /* Título Principal */
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 50px;
+            color: #ffcc00;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        /* Seção de introdução */
+        .intro {
+            background-image: url('https://via.placeholder.com/1500x700/000000/FFFFFF?text=Koenigsegg+Intro');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-size: 40px;
+            color: #fff;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .intro p {
+            font-size: 18px;
+            color: #ddd;
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #ffcc00;
+            padding: 15px 30px;
+            color: #121212;
+            font-size: 16px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f9a800;
+        }
+
+        /* Container dos modelos */
+        .models {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #1f1f1f;
+        }
+
+        .models h2 {
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        .models .card-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .models .card {
+            background-color: #333;
+            width: 30%;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .models .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .models .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .models .card img:hover {
+            transform: scale(1.1);
+        }
+
+        .models .card-content {
+            padding: 20px;
+        }
+
+        .models .card-content h3 {
+            font-size: 22px;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .models .card-content p {
+            color: #ddd;
+            font-size: 14px;
+        }
+
+        /* Seção de tecnologia */
+        .tech {
+            background-color: #222;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .tech h2 {
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        .tech p {
+            font-size: 18px;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Seção de história */
+        .history {
+            padding: 50px 20px;
+            background-color: #1f1f1f;
+            text-align: center;
+        }
+
+        .history h2 {
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        .history p {
+            font-size: 18px;
+            color: #ddd;
+            line-height: 1.6;
+        }
+
+        /* Seção de contato */
+        .contact {
+            background-color: #222;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 30px;
+        }
+
+        .contact form input, .contact form textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .contact form button {
+            background-color: #ffcc00;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            color: #121212;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact form button:hover {
+            background-color: #f9a800;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #1a1a1a;
+            padding: 20px;
+            text-align: center;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de Navegação -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#models">Modelos</a>
+        <a href="#tech">Tecnologia</a>
+        <a href="#history">História</a>
+        <a href="#contact">Contato</a>
+    </nav>
+
+    <!-- Seção de Introdução -->
+    <div class="intro">
+        <h2>Conheça a Koenigsegg</h2>
+        <p>Explore os carros mais rápidos, inovadores e exclusivos do mundo. A engenharia de ponta e a perfeição em cada detalhe.</p>
+        <a href="#models" class="button">Ver Modelos</a>
+    </div>
+
+    <!-- Seção de Modelos -->
+    <div id="models" class="models">
+        <h2>Modelos Koenigsegg</h2>
+        <div class="card-container">
+            <!-- Card Agera RS -->
+            <div class="card" onclick="window.location.href='agera.html'">
+                <img src="images/agera4.webp" alt="Koenigsegg Agera RS">
+                <div class="card-content">
+                    <h3>Agera RS</h3>
+                    <p>Com um recorde mundial de velocidade, o Agera RS é a verdadeira definição de desempenho extremo.</p>
+                </div>
+            </div>
+
+            <!-- Card Jesko -->
+            <div class="card" onclick="window.location.href='jesko.html'">
+                <img src="images/jesko.jpg" alt="Koenigsegg Jesko">
+                <div class="card-content">
+                    <h3>Jesko</h3>
+                    <p>Com uma potência de 1600 cv, o Jesko é projetado para dominar as pistas e alcançar velocidades absurdas.</p>
+                </div>
+            </div>
+
+            <!-- Card Regera -->
+            <div class="card" onclick="window.location.href='regera.html'">
+                <img src="images/regera.jpg" alt="Koenigsegg Regera">
+                <div class="card-content">
+                    <h3>Regera</h3>
+                    <p>O Regera combina o desempenho híbrido com o luxo, oferecendo uma experiência de condução única e emocionante.</p>
+                </div>
+            </div>
+
+            <!-- Card História -->
+            <div class="card" onclick="window.location.href='#history'">
+                <img src="https://via.placeholder.com/500x300/000000/FFFFFF?text=Hist%C3%B3ria+Koenigsegg" alt="História Koenigsegg">
+                <div class="card-content">
+                    <h3>História</h3>
+                    <p>Descubra como a Koenigsegg se tornou um ícone global de inovação e performance no mundo automotivo.</p>
+                </div>
+            </div>
+
+            <!-- Card Inovação Tecnológica -->
+            <div class="card" onclick="window.location.href='#tech'">
+                <img src="https://via.placeholder.com/500x300/000000/FFFFFF?text=Inova%C3%A7%C3%A3o+Tecnol%C3%B3gica" alt="Inovação Tecnológica Koenigsegg">
+                <div class="card-content">
+                    <h3>Tecnologia</h3>
+                    <p>Conheça as tecnologias inovadoras que a Koenigsegg implementa em seus supercarros.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção de Tecnologia -->
+    <div id="tech" class="tech">
+        <h2>Inovação Tecnológica</h2>
+        <p>A Koenigsegg é pioneira em muitas tecnologias automotivas inovadoras. Um dos maiores destaques é o seu motor híbrido que combina desempenho e eficiência, sistemas de transmissão exclusivos e um design aerodinâmico que redefine os limites da velocidade. A marca também utiliza materiais leves e avançados, como a fibra de carbono, para garantir o melhor desempenho possível em seus supercarros.</p>
+    </div>
+
+    <!-- Seção de História -->
+    <div id="history" class="history">
+        <h2>A História da Koenigsegg</h2>
+        <p>Fundada por Christian von Koenigsegg em 1994, a marca se tornou um ícone global de inovação e desempenho, construindo carros que desafiam os limites da engenharia. A Koenigsegg começou com o sonho de criar o carro perfeito, um supercarro que fosse mais rápido, mais forte e mais avançado do que qualquer outro no mundo.</p>
+    </div>
+
+    <!-- Seção de Contato -->
+    <div id="contact" class="contact">
+        <h2>Entre em Contato</h2>
+        <form action="https://www.koenigsegg.com/contato/" method="POST">
+            <input type="text" name="nome" placeholder="Seu Nome" required>
+            <input type="email" name="email" placeholder="Seu Email" required>
+            <textarea name="mensagem" placeholder="Sua Mensagem" rows="4" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>&copy; 2025 Koenigsegg. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
